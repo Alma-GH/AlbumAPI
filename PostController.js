@@ -2,35 +2,6 @@
 import PostService from "./PostService.js";
 
 class PostController{
-  // async create(req,res){
-  //     try{
-        
-  //       const post = await PostService.create(req.body)
-  //       res.json(post)
-  //     }catch (e){
-  //       res.status(500).json(e)
-  //     }
-
-  // }
-
-  // async createInfo(req,res){
-  //   try{
-  //     const info = await PostService.createInfo(req.body)
-  //     res.json(info)
-  //   }catch (e){
-  //     res.status(500).json(e)
-  //   }
-  // }
-
-  // async createImg(req,res){
-  //   console.log(req.files)
-  //   try{
-  //     const info = await PostService.createImg(req.files)
-  //     res.json(info)
-  //   }catch (e){
-  //     res.status(500).json(e)
-  //   }
-  // }
 
   async getAllTables(req,res){
       try{
@@ -87,28 +58,6 @@ class PostController{
     }
   }
 
-
-
-
-  // async getOne(req,res){
-  //   try{
-  //     const post = await  PostService.getOne(req.params.id)
-  //     return res.json(post)
-  //   }catch (e){
-  //     res.status(500).json(e)
-  //   }
-  // }
-
-
-
-  // async delete(req,res){
-  //   try{
-  //     const deletedPost = await PostService.delete(req.params.id)
-  //     return res.json(deletedPost)
-  //   }catch (e){
-  //     res.status(500).json(e)
-  //   }
-  // }
 }
 
 export default new PostController()
