@@ -5,19 +5,7 @@ import FIleService from "./FIleService.js"
 
 
 class PostService{
-    // async create(post, img){
-    //       const createdPost = await Table.create(post)
-    //       return  createdPost
-    // }
 
-    // async createInfo(info){
-    //   const createdPost = await Info.create(info)
-    //   return  createdPost
-    // }
-  
-    // async updatePhoto(imgs){
-
-    // }
 
     async getAll(){
           const posts = await Table.find()
@@ -81,25 +69,6 @@ class PostService{
       return updatedAudios
     }
 
-
-  
-
-    // async getOne(id){
-    //     if(!id){
-    //       throw new Error("ID not write")
-    //     }
-    //     const post = await  Table.findById(id)
-    //     return post
-    // }
-  
-
-    // async delete(id){
-    //     if(!id){
-    //         throw new Error("ID not write")
-    //     }
-    //     const deletedPost = await Table.findByIdAndDelete(id)
-    //     return deletedPost
-    // }
 }
 
 export default new PostService()
