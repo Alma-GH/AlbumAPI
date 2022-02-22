@@ -8,7 +8,7 @@ const DB_URL = "mongodb+srv://alma:2012@cluster0.li58n.mongodb.net/Album?retryWr
 
 const app = express()
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://album-client.herokuapp.com");
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods", "POST, PUT, GET, OPTIONS")
   next();
