@@ -2,6 +2,7 @@ import express from "express"
 import mongoose from "mongoose"
 import router from "./router.js"
 import fileUpload from "express-fileupload";
+import request from "request";
 
 const PORT = process.env.PORT || 5000;
 const DB_URL = "mongodb+srv://alma:2012@cluster0.li58n.mongodb.net/Album?retryWrites=true&w=majority"
@@ -29,6 +30,16 @@ async function startApp(){
     console.log(e)
   }
 }
+
+setInterval(() => {
+  
+  var url = "http://localhost:5000/api/tables" 
+  request(url, (error, response, body) => {
+  console.log("IM OK:", body)
+  })
+  console.log("after")
+
+  }, 300000)
 
 startApp()
 
