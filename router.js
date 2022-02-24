@@ -1,17 +1,17 @@
 import {Router} from "express";
-import PostController from "./PostController.js";
+import Controller from "./Controller.js";
 
 const router = new Router()
 
 
 
-router.get("/tables", PostController.getAllTables)
-router.get("/info", PostController.getInfo)
-router.get("/audio", PostController.getAudio)
+router.get("/tables", Controller.getAllTables)
+router.get("/info", Controller.getInfo)
+router.get("/audio", Controller.getAudio)
 
-router.put("/info", PostController.updateInfo)
-router.put("/tables", PostController.updateTables)
-router.put("/audio", PostController.updateAudio)
+router.put("/info", Controller.updateInfo)
+router.put("/tables", Controller.updateTables)
+router.put("/audio", Controller.updateAudio)
 
 
 
