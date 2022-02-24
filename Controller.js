@@ -1,11 +1,11 @@
 
-import PostService from "./PostService.js";
+import Service from "./Service.js";
 
-class PostController{
+class Controller{
 
   async getAllTables(req,res){
       try{
-        const posts = await PostService.getAll()
+        const posts = await Service.getAll()
         return res.json(posts)
       }catch (e){
         res.status(500).json(e)
@@ -14,7 +14,7 @@ class PostController{
 
   async getInfo(req,res){
     try{
-      const info = await PostService.getInfo()
+      const info = await Service.getInfo()
       return res.json(info)
     }catch (e){
       res.status(500).json(e)
@@ -23,7 +23,7 @@ class PostController{
 
   async getAudio(req,res){
     try{
-      const audio = await PostService.getAudio()
+      const audio = await Service.getAudio()
       return res.json(audio)
     }catch (e){
       res.status(500).json(e)
@@ -33,7 +33,7 @@ class PostController{
 
   async updateInfo(req,res){
     try{
-      const updatedPost = await PostService.updateInfo(req.body)
+      const updatedPost = await Service.updateInfo(req.body)
       return res.json(updatedPost)
     }catch (e){
       res.status(500).json(e.massage)
@@ -42,7 +42,7 @@ class PostController{
 
   async updateTables(req,res){
     try{
-      const updatedPost = await PostService.updateTables(JSON.parse(req.body.Prop), req.files)
+      const updatedPost = await Service.updateTables(JSON.parse(req.body.Prop), req.files)
       return res.json(updatedPost)
     }catch (e){
       res.status(500).json(e.massage)
@@ -51,7 +51,7 @@ class PostController{
 
   async updateAudio(req,res){
     try{
-      const updatedAudio = await PostService.updateAudio(JSON.parse(req.body.Prop), req.files)
+      const updatedAudio = await Service.updateAudio(JSON.parse(req.body.Prop), req.files)
       return res.json(updatedAudio)
     }catch (e){
       res.status(500).json(e.massage)
@@ -60,4 +60,4 @@ class PostController{
 
 }
 
-export default new PostController()
+export default new Controller()

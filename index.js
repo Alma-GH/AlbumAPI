@@ -33,11 +33,11 @@ async function startApp(){
 
 setInterval(() => {
   
-  var url = "http://localhost:5000/api/tables" 
+  let url = "https://album-test.herokuapp.com/api/tables" 
   request(url, (error, response, body) => {
   console.log("IM OK:", body)
   })
-  console.log("after")
+  console.log("5min")
 
   }, 300000)
 

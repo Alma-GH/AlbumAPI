@@ -1,10 +1,10 @@
-import Table from "./Post.js"
+import Table from "./Table.js"
 import Info from "./Info.js"
 import Audio from "./Audio.js"
-import FIleService from "./FIleService.js"
+import FileService from "./FileService.js"
 
 
-class PostService{
+class Service{
 
 
     async getAll(){
@@ -35,7 +35,7 @@ class PostService{
       let updatedPosts = []
 
       for(let img in imgs){
-        FIleService.saveFile(imgs[img], "img") 
+        FileService.saveFile(imgs[img], "img") 
         posts[+img].img = imgs[img].name
       }
       console.log("TABLES:")
@@ -59,7 +59,7 @@ class PostService{
 
       for(let music in musics){
         console.log(music)
-        FIleService.saveFile(musics[music], "music") 
+        FileService.saveFile(musics[music], "music") 
       }
 
       for(let post of posts){
@@ -71,4 +71,4 @@ class PostService{
 
 }
 
-export default new PostService()
+export default new Service()
