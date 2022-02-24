@@ -1,7 +1,7 @@
 import Table from "./Table.js"
 import Info from "./Info.js"
 import Audio from "./Audio.js"
-import FileService from "./FileService.js"
+import FileService from "./FService.js"
 
 
 class Service{
