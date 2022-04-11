@@ -1,6 +1,6 @@
-import Table from "./Table.js"
-import Info from "./Info.js"
-import Audio from "./Audio.js"
+import Table from "./models/Table.js"
+import Info from "./models/Info.js"
+import Audio from "./models/Audio.js"
 import FileService from "./FService.js"
 
 
